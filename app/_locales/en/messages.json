@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "Reddit Comment",
+    "message": "Reddit & Hacker News Comment Collapser",
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "Easy way to navigate through reddit comments without using your mouse.",
+    "message": "Easy way to navigate through reddit & Hacker News comments without using your mouse.",
     "description": "The description of the application"
   }
 }
