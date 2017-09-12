@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://chrome.google.com/webstore">
-    <img alt="Reddit & Hacker News Comment Collapser" src="https://github.com/zwacky/comment-collapser-chrome/blob/master/app/images/logos/comment-collapser-logo-full.png?raw=true" width="546">
+    <img alt="Reddit & Hacker News Comment Collapser" src="https://github.com/zwacky/comment-collapser-chrome/blob/master/images/comment-collapser-logo-full.png?raw=true" width="546">
   </a>
 </p>
 <br>
