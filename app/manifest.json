@@ -22,7 +22,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.reddit.com/r/*"
+				"https://www.reddit.com/r/*",
+				"https://news.ycombinator.com/item*"
       ],
       "js": [
         "scripts/contentscript.js"

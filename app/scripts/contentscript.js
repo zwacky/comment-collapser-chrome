@@ -1,7 +1,20 @@
 'use strict';
 
+var sites = {
+	reddit: {
+		url: 'https://www.reddit.com/r/',
+		expandSelector: 'a.expand'
+	},
+	hackernews: {
+		url: 'https://news.ycombinator.com/item',
+		expandSelector: 'a.togg'
+	}
+};
 var expands = null;
 var currentExpandElement = null;
+var expandSelector = (location.href.indexOf(sites.reddit.url) !== -1) ?
+	sites.reddit.expandSelector :
+	sites.hackernews.expandSelector;
 
 updateExpands();
 
@@ -36,7 +49,7 @@ function hasModifierKeysActive(evt) {
 }
 
 function isCommentBoxFocused() {
-	return document.querySelector('textarea[data-event-action="comment"]') === document.activeElement;
+	return ['TEXTAREA', 'INPUT'].indexOf(document.activeElement.tagName) !== -1;
 }
 
 /**
@@ -86,6 +99,7 @@ function scrollTo(element) {
 }
 
 function updateExpands() {
-	expands = Array.prototype.slice.call(document.querySelectorAll('a.expand'))
+	// check if we are on hacker news or reddit
+	expands = Array.prototype.slice.call(document.querySelectorAll(expandSelector))
 		.filter(function(el) { return el.offsetWidth !== 0 && el.offsetHeight !== 0; }); // check for non-hidden elements only
 }
